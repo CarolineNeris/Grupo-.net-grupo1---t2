@@ -54,7 +54,8 @@ Implementar, obrigatoriamente, o gerenciamento das entidades abaixo e seus atrib
 
 ### UML
 
-[...Insira a UML aqui...]
+![UML](imagem1.png)
+
 
 **Regras de negócio:**
 - Um treino pode conter até 10 exercícios;
