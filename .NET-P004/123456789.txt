@@ -1,0 +1,5 @@
+Nome: MARCELO
+Data de Nascimento: 28-05-1980
+CPF: 123456789
+Altura: 17
+Peso: 87

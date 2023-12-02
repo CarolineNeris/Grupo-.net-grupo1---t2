@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 class Program
@@ -93,6 +94,9 @@ class Program
 
         Treinador treinador = new Treinador(nome, dataNascimento, cpf, cref);
         academia.AdicionarTreinador(treinador);
+
+        
+        academia.SalvarCadastroEmArquivo(treinador);
 
         Console.WriteLine("Treinador adicionado com sucesso!");
         Console.ReadLine();
@@ -191,6 +195,9 @@ class Program
 
         Cliente cliente = new Cliente(nome, dataNascimento, cpf, altura, peso);
         academia.AdicionarCliente(cliente);
+
+        
+        academia.SalvarCadastroEmArquivo(cliente);
 
         Console.WriteLine("Cliente adicionado com sucesso!");
         Console.ReadLine();
@@ -368,7 +375,6 @@ class Academia
 
         int idade = now.Year - dataNascimento.Year;
 
-        // Check if the birthday has occurred this year
         if (now.Month < dataNascimento.Month || (now.Month == dataNascimento.Month && now.Day < dataNascimento.Day))
         {
             idade--;
@@ -399,6 +405,34 @@ class Academia
         }
 
         Console.ReadLine();
+    }
+
+    public void SalvarCadastroEmArquivo(Pessoa pessoa)
+    {
+        string filePath = $"{pessoa.CPF} - {pessoa.Nome}.txt"; 
+
+        using (StreamWriter sw = new StreamWriter(filePath))
+        {
+            
+
+            if (pessoa is Treinador treinador)
+            {
+                sw.WriteLine($"Ficha de Treinador\n");
+                sw.WriteLine($"Nome: {pessoa.Nome}");
+                sw.WriteLine($"Data de Nascimento: {pessoa.DataNascimento:dd-MM-yyyy}");
+                sw.WriteLine($"CPF: {pessoa.CPF}");
+                sw.WriteLine($"CREF: {treinador.CREF}");
+            }
+            else if (pessoa is Cliente cliente)
+            {
+                sw.WriteLine($"Ficha do Cliente\n");
+                sw.WriteLine($"Nome: {pessoa.Nome}");
+                sw.WriteLine($"Data de Nascimento: {pessoa.DataNascimento:dd-MM-yyyy}");
+                sw.WriteLine($"CPF: {pessoa.CPF}");
+                sw.WriteLine($"Altura: {cliente.Altura}");
+                sw.WriteLine($"Peso: {cliente.Peso}");
+            }
+        }
     }
 }
 
