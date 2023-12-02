@@ -212,5 +212,158 @@ static void AdicionarCliente(Academia academia)
 
         Console.ReadLine();
     }
+ static void ListarClientes(Academia academia)
+    {
+        List<Cliente> clientes = academia.ListarClientes();
 
+        if (clientes.Count > 0)
+        {
+            foreach (var cliente in clientes)
+            {
+                Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhum cliente cadastrado.");
+        }
+
+        Console.ReadLine();
+    }
+
+    static void GerarRelatorios(Academia academia)
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("==== Menu Relatórios ====");
+            Console.WriteLine("\n1. Clientes Ordenados Por Nome");
+            Console.WriteLine("2. Clientes Mais Velhos Para Mais Novos");
+            Console.WriteLine("3. Treinadores Aniversariantes do Mês");
+            Console.WriteLine("0. Voltar");
+
+            Console.Write("\nEscolha uma opção: ");
+            string opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1":
+                    academia.ExibirClientesOrdenadosPorNome();
+                    break;
+                case "2":
+                    academia.ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo();
+                    break;
+                case "3":
+                    Console.WriteLine("Informe o número do mês:");
+                    int mes = Convert.ToInt32(Console.ReadLine());
+                    academia.ExibirTreinadoresAniversariantesDoMes(mes);
+                    break;
+                case "0":
+                    return;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    Console.ReadLine();
+                    break;
+            }
+        }
+    }
+}
+
+class Academia
+{
+    private List<Treinador> treinadores = new List<Treinador>();
+    private List<Cliente> clientes = new List<Cliente>();
+
+    public void AdicionarTreinador(Treinador treinador)
+    {
+        treinadores.Add(treinador);
+    }
+
+    public void RemoverTreinador(Treinador treinador)
+    {
+        treinadores.Remove(treinador);
+    }
+
+    public List<Treinador> ListarTreinadores()
+    {
+        return treinadores;
+    }
+
+    public void AdicionarCliente(Cliente cliente)
+    {
+        clientes.Add(cliente);
+    }
+
+    public void RemoverCliente(Cliente cliente)
+    {
+        clientes.Remove(cliente);
+    }
+
+    public List<Cliente> ListarClientes()
+    {
+        return clientes;
+    }
+
+    public Treinador GetTreinadorPorCPF(string cpf)
+    {
+        return treinadores.FirstOrDefault(t => t.CPF == cpf);
+    }
+
+    public Cliente GetClientePorCPF(string cpf)
+    {
+        return clientes.FirstOrDefault(c => c.CPF == cpf);
+    }
+
+    public void ExibirClientesOrdenadosPorNome()
+    {
+        // Implementação
+    }
+
+    public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo()
+    {
+        // Implementação
+    }
+
+    public void ExibirTreinadoresAniversariantesDoMes(int mes)
+    {
+        // Implementação
+    }
+}
+
+class Pessoa
+{
+    public string Nome { get; set; }
+    public DateTime DataNascimento { get; set; }
+    public string CPF { get; set; }
+
+    public Pessoa(string nome, DateTime dataNascimento, string cpf)
+    {
+        Nome = nome;
+        DataNascimento = dataNascimento;
+        CPF = cpf;
+    }
+}
+
+class Treinador : Pessoa
+{
+    public string CREF { get; set; }
+
+    public Treinador(string nome, DateTime dataNascimento, string cpf, string cref)
+        : base(nome, dataNascimento, cpf)
+    {
+        CREF = cref;
+    }
+}
+
+class Cliente : Pessoa
+{
+    public int Altura { get; set; }
+    public int Peso { get; set; }
+
+    public Cliente(string nome, DateTime dataNascimento, string cpf, int altura, int peso)
+        : base(nome, dataNascimento, cpf)
+    {
+        Altura = altura;
+        Peso = peso;
+    }
 }
