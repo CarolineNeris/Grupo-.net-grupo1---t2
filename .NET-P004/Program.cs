@@ -316,7 +316,21 @@ class Academia
 
     public void ExibirClientesOrdenadosPorNome()
     {
-        // Implementação
+        var clientesOrdenados = clientes.OrderBy(c => c.Nome).ToList();
+
+    if (clientesOrdenados.Count > 0)
+    {
+        foreach (var cliente in clientesOrdenados)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Nenhum cliente cadastrado.");
+    }
+
+    Console.ReadLine();
     }
 
     public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo()
