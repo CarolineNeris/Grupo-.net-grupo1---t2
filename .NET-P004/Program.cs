@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class Programa
+class Program
 {
     static void Main()
     {
@@ -42,7 +42,7 @@ class Programa
         }
     }
 
-static void GerenciarTreinadores(Academia academia)
+    static void GerenciarTreinadores(Academia academia)
     {
         while (true)
         {
@@ -76,7 +76,8 @@ static void GerenciarTreinadores(Academia academia)
             }
         }
     }
-static void AdicionarTreinador(Academia academia)
+
+    static void AdicionarTreinador(Academia academia)
     {
         Console.WriteLine("Informe o nome do treinador:");
         string nome = Console.ReadLine();
@@ -116,7 +117,8 @@ static void AdicionarTreinador(Academia academia)
 
         Console.ReadLine();
     }
-static void ListarTreinadores(Academia academia)
+
+    static void ListarTreinadores(Academia academia)
     {
         List<Treinador> treinadores = academia.ListarTreinadores();
 
@@ -169,7 +171,8 @@ static void ListarTreinadores(Academia academia)
             }
         }
     }
-static void AdicionarCliente(Academia academia)
+
+    static void AdicionarCliente(Academia academia)
     {
         Console.WriteLine("Informe o nome do cliente:");
         string nome = Console.ReadLine();
@@ -212,7 +215,8 @@ static void AdicionarCliente(Academia academia)
 
         Console.ReadLine();
     }
- static void ListarClientes(Academia academia)
+
+    static void ListarClientes(Academia academia)
     {
         List<Cliente> clientes = academia.ListarClientes();
 
@@ -318,29 +322,83 @@ class Academia
     {
         var clientesOrdenados = clientes.OrderBy(c => c.Nome).ToList();
 
-    if (clientesOrdenados.Count > 0)
-    {
-        foreach (var cliente in clientesOrdenados)
-        {
-            Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Nenhum cliente cadastrado.");
-    }
+        Console.Clear();
+        Console.WriteLine("==== Clientes Ordenados Por Nome ====");
 
-    Console.ReadLine();
+        if (clientesOrdenados.Count > 0)
+        {
+            foreach (var cliente in clientesOrdenados)
+            {
+                Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhum cliente cadastrado.");
+        }
+
+        Console.ReadLine();
     }
 
     public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo()
     {
-        // Implementação
+        var clientesOrdenados = clientes.OrderByDescending(c => GetIdade(c.DataNascimento)).ToList();
+
+        Console.Clear();
+        Console.WriteLine("==== Clientes Ordenados Por Idade ====");
+
+        if (clientesOrdenados.Count > 0)
+        {
+            foreach (var cliente in clientesOrdenados)
+            {
+                Console.WriteLine($"Nome: {cliente.Nome}, Idade: {GetIdade(cliente.DataNascimento)} anos");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhum cliente cadastrado.");
+        }
+
+        Console.ReadLine();
+    }
+
+    private int GetIdade(DateTime dataNascimento)
+    {
+        DateTime now = DateTime.Now;
+
+        int idade = now.Year - dataNascimento.Year;
+
+        // Check if the birthday has occurred this year
+        if (now.Month < dataNascimento.Month || (now.Month == dataNascimento.Month && now.Day < dataNascimento.Day))
+        {
+            idade--;
+        }
+
+        return idade;
     }
 
     public void ExibirTreinadoresAniversariantesDoMes(int mes)
     {
-        // Implementação
+        var treinadoresAniversariantes = treinadores
+            .Where(t => t.DataNascimento.Month == mes)
+            .ToList();
+
+        Console.Clear();
+        Console.WriteLine($"==== Treinadores Aniversariantes do Mês {mes} ====");
+
+        if (treinadoresAniversariantes.Count > 0)
+        {
+            foreach (var treinador in treinadoresAniversariantes)
+            {
+                Console.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhum treinador aniversariante neste mês.");
+        }
+
+        Console.ReadLine();
     }
 }
 
