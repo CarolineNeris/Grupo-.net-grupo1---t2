@@ -3,12 +3,14 @@ using Pessoas;
 using Academias;
 using Relatorios;
 
+
 class Program
 {
     static void Main()
     {
         Academia academia = new Academia();
         Relatorio relatorio = new Relatorio();
+        //Exercicio exercicio = new Exercicio();
         // Cadastros pré-definidos
         academia.CadastrarCliente("João", new DateTime(1990, 5, 15), "12345678900", 1.75, 70);
         academia.CadastrarCliente("Maria", new DateTime(1985, 10, 25), "98775832100", 1.60, 55);
@@ -22,6 +24,27 @@ class Program
         academia.CadastrarTreinador("Ana", new DateTime(1975, 7, 12), "44456366677", "781902");
         academia.CadastrarTreinador("Mariana", new DateTime(1982, 9, 20), "99987577766", "624073");
         academia.CadastrarTreinador("Lucas", new DateTime(1978, 11, 5), "33329611100", "789084");
+
+        academia.CadastrarExercicio("Pernas", 3, 12, 60);
+        academia.CadastrarExercicio("Braços", 4, 10, 45);
+        academia.CadastrarExercicio("Abdominais", 5, 15, 30);
+        academia.CadastrarExercicio("Costas", 4, 8, 60);
+        academia.CadastrarExercicio("Peito", 3, 10, 45);
+        academia.CadastrarExercicio("Ombros", 5, 12, 30);
+        academia.CadastrarExercicio("Glúteos", 4, 15, 60);
+        academia.CadastrarExercicio("Trapézio", 3, 8, 45);
+        academia.CadastrarExercicio("Bíceps", 5, 10, 30);
+        academia.CadastrarExercicio("Tríceps", 4, 12, 60);
+        academia.CadastrarExercicio("Panturrilhas", 3, 15, 45);
+        academia.CadastrarExercicio("Antebraços", 5, 8, 30);
+        academia.CadastrarExercicio("Cardio", 4, 10, 60);
+        academia.CadastrarExercicio("Yoga", 3, 12, 45);
+        academia.CadastrarExercicio("Alongamento", 5, 15, 30);
+        academia.CadastrarExercicio("Pilates", 4, 8, 60);
+        academia.CadastrarExercicio("Funcional", 3, 10, 45);
+        academia.CadastrarExercicio("HIIT", 5, 12, 30);
+        academia.CadastrarExercicio("Zumba", 4, 15, 60);
+        academia.CadastrarExercicio("Natação", 3, 8, 45);
 
         bool continuar = true;
 
@@ -108,6 +131,7 @@ class Program
                         Console.WriteLine("1. Cadastrar Cliente");
                         Console.WriteLine("2. Cadastrar Treinador");
                         Console.WriteLine("3. Exibir Cadastros");
+                        Console.WriteLine("4. Cadastrar novo Exercício");
                         Console.WriteLine("0. Voltar ao Menu Principal");
 
                         string opcaoCadastros = Console.ReadLine();
@@ -143,6 +167,23 @@ class Program
                             case "3":
                                 academia.ExibirCadastros();
                                 break;
+                            case "4":
+                                Console.WriteLine("Digite o grupo muscular do exercício:");
+                                string grupoMuscular = Console.ReadLine();
+
+                                Console.WriteLine("Digite o número de séries do exercício:");
+                                int series = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Digite o número de repetições do exercício:");
+                                int repeticoes = Convert.ToInt32(Console.ReadLine());
+
+                                Console.WriteLine("Digite o tempo de intervalo em segundos do exercício:");
+                                int tempoIntervaloSegundos = Convert.ToInt32(Console.ReadLine());
+
+                                // Supondo que "treino" é uma instância de Treino existente onde você deseja adicionar o exercício
+                                academia.CadastrarExercicio(grupoMuscular, series, repeticoes, tempoIntervaloSegundos);
+                                break;
+
 
                             case "0":
                                 menuCadastros = false;

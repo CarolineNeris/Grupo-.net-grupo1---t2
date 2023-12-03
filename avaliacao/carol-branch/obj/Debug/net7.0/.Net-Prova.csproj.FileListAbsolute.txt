@@ -12,3 +12,10 @@ C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova\.net-prova\ob
 C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova\.net-prova\obj\Debug\net7.0\.Net-Prova.pdb
 C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova\.net-prova\obj\Debug\net7.0\.Net-Prova.genruntimeconfig.cache
 C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova\.net-prova\obj\Debug\net7.0\ref\.Net-Prova.dll
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.AssemblyInfoInputs.cache
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.AssemblyInfo.cs
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.csproj.CoreCompileInputs.cache
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.dll
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\refint\.Net-Prova.dll
+C:\Users\Carol\Documents\VS CODEg\VS CODE\PROJETO\TIC18-.NET\prova em grupo\pra subir no grupo\Grupo-.net-grupo1---t2\avaliacao\carol-branch\obj\Debug\net7.0\.Net-Prova.pdb
