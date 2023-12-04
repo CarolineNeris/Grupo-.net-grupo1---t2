@@ -337,71 +337,60 @@ class Academia
         return clientes.FirstOrDefault(c => c.CPF == cpf);
     }
 
-    public void ExibirClientesOrdenadosPorNome()
+    public void ExibirClientesOrdenadosPorNome(StreamWriter sw)
+{
+    var clientesOrdenados = clientes.OrderBy(c => c.Nome).ToList();
+
+    if (clientesOrdenados.Count > 0)
     {
-        var clientesOrdenados = clientes.OrderBy(c => c.Nome).ToList();
-
-        Console.Clear();
-        Console.WriteLine("==== Clientes Ordenados Por Nome ====");
-
-        if (clientesOrdenados.Count > 0)
+        foreach (var cliente in clientesOrdenados)
         {
-            foreach (var cliente in clientesOrdenados)
-            {
-                Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
-            }
+            Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
         }
-        else
-        {
-            Console.WriteLine("Nenhum cliente cadastrado.");
-        }
-
-        Console.ReadLine();
     }
-
-    public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo()
+    else
     {
-        var clientesOrdenados = clientes.OrderByDescending(c => GetIdade(c.DataNascimento)).ToList();
-
-        Console.Clear();
-        Console.WriteLine("==== Clientes Ordenados Por Idade ====");
-
-        if (clientesOrdenados.Count > 0)
-        {
-            foreach (var cliente in clientesOrdenados)
-            {
-                Console.WriteLine($"Nome: {cliente.Nome}, Idade: {GetIdade(cliente.DataNascimento)} anos");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Nenhum cliente cadastrado.");
-        }
-
-        Console.ReadLine();
+        Console.WriteLine("Nenhum cliente cadastrado.");
     }
+}
+
+    public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo(StreamWriter sw)
+{
+    var clientesOrdenados = clientes.OrderByDescending(c => GetIdade(c.DataNascimento)).ToList();
+
+    if (clientesOrdenados.Count > 0)
+    {
+        foreach (var cliente in clientesOrdenados)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}, Idade: {GetIdade(cliente.DataNascimento)} anos");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Nenhum cliente cadastrado.");
+    }
+}
 
     private int GetIdade(DateTime dataNascimento)
+{
+    DateTime now = DateTime.Now;
+    int idade = now.Year - dataNascimento.Year;
+
+    if (now.Month < dataNascimento.Month || (now.Month == dataNascimento.Month && now.Day < dataNascimento.Day))
     {
-        DateTime now = DateTime.Now;
-
-        int idade = now.Year - dataNascimento.Year;
-
-        if (now.Month < dataNascimento.Month || (now.Month == dataNascimento.Month && now.Day < dataNascimento.Day))
-        {
-            idade--;
-        }
-
-        return idade;
+        idade--;
     }
 
-    public void ExibirTreinadoresAniversariantesDoMes(int mes)
+    return idade;
+}
+
+
+   public void ExibirTreinadoresAniversariantesDoMes(StreamWriter sw, int mes)
 {
     var treinadoresAniversariantes = treinadores
         .Where(t => t.DataNascimento.Month == mes)
         .ToList();
 
-    Console.Clear();
     Console.WriteLine($"==== Treinadores Aniversariantes do Mês {mes} ====");
 
     if (treinadoresAniversariantes.Count > 0)
@@ -416,12 +405,13 @@ class Academia
         Console.WriteLine("Nenhum treinador aniversariante neste mês.");
     }
 
-    Console.ReadLine();
 }
 
     public void SalvarCadastroEmArquivo(Pessoa pessoa)
     {
-        string filePath = $"{pessoa.CPF} - {pessoa.Nome}.txt"; 
+        string nomeArquivo = new string(pessoa.Nome.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c).ToArray());
+
+        string filePath = $"{pessoa.CPF} - {nomeArquivo}.txt";
 
         using (StreamWriter sw = new StreamWriter(filePath))
         {
@@ -455,54 +445,21 @@ public void GerarRelatorioGeral()
 
     using (StreamWriter sw = new StreamWriter(filePath))
     {
-        // Relatório de Treinadores
+               
         sw.WriteLine("==== Relatório de Treinadores ====\n");
-        List<Treinador> treinadores = ListarTreinadores();
-        foreach (var treinador in treinadores)
+        List<Treinador> treinadoresList = ListarTreinadores();
+        foreach (var treinador in treinadoresList)
         {
-            sw.WriteLine($"Nome: {treinador.Nome}, CREF: {treinador.CREF}");
+            sw.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}, CREF: {treinador.CREF}");
         }
-
-        // Adiciona uma quebra de linha entre os relatórios
+        
         sw.WriteLine("\n");
-
-        // Relatório de Clientes
+        
         sw.WriteLine("==== Relatório de Clientes ====\n");
-        List<Cliente> clientes = ListarClientes();
         foreach (var cliente in clientes)
         {
             sw.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
-        }
-
-        // Adiciona uma quebra de linha entre os relatórios
-        sw.WriteLine("\n");
-
-        // Relatório de Treinadores Aniversariantes do Mês
-        sw.WriteLine("==== Relatório de Treinadores Aniversariantes do Mês ====\n");
-        Console.WriteLine("Informe o número do mês:");
-        int mes = Convert.ToInt32(Console.ReadLine());
-        ExibirTreinadoresAniversariantesDoMes(mes);
-
-        // Adiciona uma quebra de linha entre os relatórios
-        sw.WriteLine("\n");
-
-        // Relatório de Fichas Individuais
-        sw.WriteLine("==== Relatório de Fichas Individuais ====\n");
-        foreach (var treinador in treinadores)
-        {
-            string treinadorFilePath = $"{treinador.CPF} - {treinador.Nome}.txt";
-            if (File.Exists(treinadorFilePath))
-            {
-                sw.WriteLine(File.ReadAllText(treinadorFilePath));
-            }
-        }
-        foreach (var cliente in clientes)
-        {
-            string clienteFilePath = $"{cliente.CPF} - {cliente.Nome}.txt";
-            if (File.Exists(clienteFilePath))
-            {
-                sw.WriteLine(File.ReadAllText(clienteFilePath));
-            }
+            sw.WriteLine($"Idade: {GetIdade(cliente.DataNascimento)}\n");
         }
     }
 
@@ -511,6 +468,20 @@ public void GerarRelatorioGeral()
 }
 
 
+    internal void ExibirClientesOrdenadosPorNome()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void ExibirTreinadoresAniversariantesDoMes(int mes)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 class Pessoa
@@ -532,11 +503,12 @@ class Treinador : Pessoa
     public string CREF { get; set; }
 
     public Treinador(string nome, DateTime dataNascimento, string cpf, string cref)
-        : base( nome, dataNascimento, cpf)
+        : base(nome, dataNascimento, cpf)
     {
         CREF = cref;
     }
 }
+
 
 class Cliente : Pessoa
 {
