@@ -437,7 +437,7 @@ class Academia
 }
 
 class Pessoa
-{
+{   
     public string Nome { get; set; }
     public DateTime DataNascimento { get; set; }
     public string CPF { get; set; }
@@ -455,7 +455,7 @@ class Treinador : Pessoa
     public string CREF { get; set; }
 
     public Treinador(string nome, DateTime dataNascimento, string cpf, string cref)
-        : base(nome, dataNascimento, cpf)
+        : base( nome, dataNascimento, cpf)
     {
         CREF = cref;
     }

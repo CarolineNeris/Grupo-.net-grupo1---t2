@@ -1,6 +1,0 @@
-Cadastro de Treinadores
-
-Nome: marta
-Data de Nascimento: 28-07-1985
-CPF: 12345
-CREF: 789

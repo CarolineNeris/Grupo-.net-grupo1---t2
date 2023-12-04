@@ -1,6 +1,0 @@
-Ficha de Treinadores
-
-Nome: antonio
-Data de Nascimento: 12-05-1987
-CPF: 123456
-CREF: 456
