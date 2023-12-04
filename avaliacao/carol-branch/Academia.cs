@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using Pessoas;
 
 namespace Academias //optei por incluir um s em academia para divergir do nome da class, isso dá problema
@@ -110,6 +111,7 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
         public int DuracaoEstimadaMinutos { get; set; }
         public DateTime DataInicio { get; set; }
         public int VencimentoDias { get; set; }
+        public  List<Cliente> ListaCliente { get; set; }
     }
 
 }
