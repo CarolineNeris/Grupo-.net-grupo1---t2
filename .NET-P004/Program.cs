@@ -259,7 +259,7 @@ class Program
         Console.WriteLine("\n1. Clientes Ordenados Por Nome");
         Console.WriteLine("2. Clientes Mais Velhos Para Mais Novos");
         Console.WriteLine("3. Treinadores Aniversariantes do Mês");
-        Console.WriteLine("4. Gerar Relatório Geral");  // Novo caso adicionado
+        Console.WriteLine("4. Gerar Relatório Geral em TXT");
         Console.WriteLine("0. Voltar");
 
         Console.Write("\nEscolha uma opção: ");
@@ -278,8 +278,8 @@ class Program
                 int mes = Convert.ToInt32(Console.ReadLine());
                 academia.ExibirTreinadoresAniversariantesDoMes(mes);
                 break;
-            case "4":  // Novo caso adicionado
-                academia.GerarRelatorioGeral();
+            case "4":  
+                academia.GerarRelatorioGeral();                
                 break;
             case "0":
                 return;
@@ -396,28 +396,28 @@ class Academia
     }
 
     public void ExibirTreinadoresAniversariantesDoMes(int mes)
+{
+    var treinadoresAniversariantes = treinadores
+        .Where(t => t.DataNascimento.Month == mes)
+        .ToList();
+
+    Console.Clear();
+    Console.WriteLine($"==== Treinadores Aniversariantes do Mês {mes} ====");
+
+    if (treinadoresAniversariantes.Count > 0)
     {
-        var treinadoresAniversariantes = treinadores
-            .Where(t => t.DataNascimento.Month == mes)
-            .ToList();
-
-        Console.Clear();
-        Console.WriteLine($"==== Treinadores Aniversariantes do Mês {mes} ====");
-
-        if (treinadoresAniversariantes.Count > 0)
+        foreach (var treinador in treinadoresAniversariantes)
         {
-            foreach (var treinador in treinadoresAniversariantes)
-            {
-                Console.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}");
-            }
+            Console.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}");
         }
-        else
-        {
-            Console.WriteLine("Nenhum treinador aniversariante neste mês.");
-        }
-
-        Console.ReadLine();
     }
+    else
+    {
+        Console.WriteLine("Nenhum treinador aniversariante neste mês.");
+    }
+
+    Console.ReadLine();
+}
 
     public void SalvarCadastroEmArquivo(Pessoa pessoa)
     {
@@ -448,6 +448,7 @@ class Academia
     }
 
     // Adicione este método à classe Academia
+
 public void GerarRelatorioGeral()
 {
     string filePath = "RelatorioGeral.txt";
@@ -480,26 +481,35 @@ public void GerarRelatorioGeral()
         sw.WriteLine("==== Relatório de Treinadores Aniversariantes do Mês ====\n");
         Console.WriteLine("Informe o número do mês:");
         int mes = Convert.ToInt32(Console.ReadLine());
-        List<Treinador> treinadoresAniversariantes = treinadores
-            .Where(t => t.DataNascimento.Month == mes)
-            .ToList();
+        ExibirTreinadoresAniversariantesDoMes(mes);
 
-        if (treinadoresAniversariantes.Count > 0)
+        // Adiciona uma quebra de linha entre os relatórios
+        sw.WriteLine("\n");
+
+        // Relatório de Fichas Individuais
+        sw.WriteLine("==== Relatório de Fichas Individuais ====\n");
+        foreach (var treinador in treinadores)
         {
-            foreach (var treinador in treinadoresAniversariantes)
+            string treinadorFilePath = $"{treinador.CPF} - {treinador.Nome}.txt";
+            if (File.Exists(treinadorFilePath))
             {
-                sw.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}");
+                sw.WriteLine(File.ReadAllText(treinadorFilePath));
             }
         }
-        else
+        foreach (var cliente in clientes)
         {
-            sw.WriteLine("Nenhum treinador aniversariante neste mês.");
+            string clienteFilePath = $"{cliente.CPF} - {cliente.Nome}.txt";
+            if (File.Exists(clienteFilePath))
+            {
+                sw.WriteLine(File.ReadAllText(clienteFilePath));
+            }
         }
     }
 
     Console.WriteLine($"Relatório geral gerado com sucesso. Arquivo salvo em {filePath}");
     Console.ReadLine();
 }
+
 
 }
 
