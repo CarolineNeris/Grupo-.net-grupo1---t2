@@ -10,8 +10,7 @@ class Program
     {
         Academia academia = new Academia();
         Relatorio relatorio = new Relatorio();
-
-        
+            
         academia.CadastrarCliente("João", new DateTime(1990, 5, 15), "12345678900", 1.75, 70);
         academia.CadastrarCliente("Maria", new DateTime(1985, 10, 25), "98775832100", 1.60, 55);
         academia.CadastrarCliente("João", new DateTime(1990, 5, 15), "12345676800", 1.75, 70);
@@ -42,11 +41,11 @@ class Program
         Exercicio.CadastrarExercicio("Zumba", 4, 15, 60);
         Exercicio.CadastrarExercicio("Natação", 3, 8, 45);
 
+        
         foreach (Exercicio ex in Exercicio.listaExercicios)
         {
             Console.WriteLine($"Grupo Muscular: {ex.GrupoMuscular}, Séries: {ex.Series}, Repetições: {ex.Repeticoes}, Intervalo: {ex.TempoIntervaloSegundos} segundos");
         }
-
 
         
         foreach (Exercicio ex in Exercicio.listaExercicios){}
@@ -63,7 +62,7 @@ class Program
             Console.WriteLine("0. Sair");
 
             Console.Write("\nSelecione a operação desejada: ");
-            string opcaoPrincipal = Console.ReadLine();
+            string opcaoPrincipal = Console.ReadLine();            
 
             switch (opcaoPrincipal)
             {   
@@ -71,8 +70,8 @@ class Program
                     bool menuCadastros = true;
                     while (menuCadastros)
                     {
-                        Console.Clear();
-                        Console.WriteLine("==== Menu Cadastros ====\n");                    
+                        Console.WriteLine("\n");
+                        Console.WriteLine("\n==== Menu Cadastros ====\n");                    
                         Console.WriteLine("1. Cadastrar Cliente");
                         Console.WriteLine("2. Cadastrar Treinador");
                         Console.WriteLine("3. Exibir Cadastros");
@@ -81,15 +80,15 @@ class Program
 
                         Console.Write("\nSelecione a operação desejada: ");
                         string opcaoCadastros = Console.ReadLine();
-
+                        
                         switch (opcaoCadastros)
                         {
                             case "1":
-                                Console.WriteLine("Digite o nome do cliente:");
+                                Console.WriteLine("\nDigite o nome do cliente:");
                                 string nomeCliente = Console.ReadLine();
-                                Console.WriteLine("Digite a data de nascimento do cliente (dd-MM-yyyy):");
+                                Console.WriteLine("Digite a data de nascimento do cliente (yyyy-MM-dd):");
                                 DateTime dataNascimentoCliente = Convert.ToDateTime(Console.ReadLine());
-                                Console.WriteLine("Digite o CPF do cliente:");
+                                Console.WriteLine("Digite o CPF do cliente com 11 dígitos:");
                                 string cpfCliente = Console.ReadLine();
                                 Console.WriteLine("Digite a altura do cliente:");
                                 double alturaCliente = Convert.ToDouble(Console.ReadLine());
@@ -99,9 +98,9 @@ class Program
                                 break;
 
                             case "2":
-                                Console.WriteLine("Digite o nome do treinador:");
+                                Console.WriteLine("\nDigite o nome do treinador:");
                                 string nomeTreinador = Console.ReadLine();
-                                Console.WriteLine("Digite a data de nascimento do treinador (dd-MM-yyyy):");
+                                Console.WriteLine("Digite a data de nascimento do treinador (yyyy-MM-dd):");
                                 DateTime dataNascimentoTreinador = Convert.ToDateTime(Console.ReadLine());
                                 Console.WriteLine("Digite o CPF do treinador:");
                                 string cpfTreinador = Console.ReadLine();
@@ -114,7 +113,7 @@ class Program
                                 academia.ExibirCadastros();
                                 break;
                             case "4":
-                                Console.WriteLine("Digite o grupo muscular do exercício:");
+                                Console.WriteLine("\nDigite o grupo muscular do exercício:");
                                 string grupoMuscular = Console.ReadLine();
 
                                 Console.WriteLine("Digite o número de séries do exercício:");
