@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Academias;
 
 namespace Pessoas
 {
@@ -89,7 +90,7 @@ namespace Pessoas
                 }
             }
         }
-
+        
         protected double peso;
         public double Peso
         {

@@ -111,7 +111,7 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
         public int DuracaoEstimadaMinutos { get; set; }
         public DateTime DataInicio { get; set; }
         public int VencimentoDias { get; set; }
-        public  List<Cliente> ListaCliente { get; set; }
+        //estou decidindo se coloco cliente no treino ou treino no cliente
     }
 
 }
