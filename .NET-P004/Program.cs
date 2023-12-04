@@ -103,24 +103,28 @@ class Program
     }
 
     static void RemoverTreinador(Academia academia)
+{
+    Console.WriteLine("Informe o CPF do treinador a ser removido:");
+    string cpf = Console.ReadLine();
+
+    Treinador treinador = academia.GetTreinadorPorCPF(cpf);
+
+    if (treinador != null)
     {
-        Console.WriteLine("Informe o CPF do treinador a ser removido:");
-        string cpf = Console.ReadLine();
+        academia.RemoverTreinador(treinador);
+        
+        string filePath = $"{treinador.CPF} - {treinador.Nome}.txt";
+        File.Delete(filePath);
 
-        Treinador treinador = academia.GetTreinadorPorCPF(cpf);
-
-        if (treinador != null)
-        {
-            academia.RemoverTreinador(treinador);
-            Console.WriteLine("Treinador removido com sucesso!");
-        }
-        else
-        {
-            Console.WriteLine("Treinador não encontrado.");
-        }
-
-        Console.ReadLine();
+        Console.WriteLine("Treinador removido com sucesso!");
     }
+    else
+    {
+        Console.WriteLine("Treinador não encontrado.");
+    }
+
+    Console.ReadLine();
+}
 
     static void ListarTreinadores(Academia academia)
     {
@@ -203,25 +207,29 @@ class Program
         Console.ReadLine();
     }
 
-    static void RemoverCliente(Academia academia)
+   static void RemoverCliente(Academia academia)
+{
+    Console.WriteLine("Informe o CPF do cliente a ser removido:");
+    string cpf = Console.ReadLine();
+
+    Cliente cliente = academia.GetClientePorCPF(cpf);
+
+    if (cliente != null)
     {
-        Console.WriteLine("Informe o CPF do cliente a ser removido:");
-        string cpf = Console.ReadLine();
+        academia.RemoverCliente(cliente);
+        
+        string filePath = $"{cliente.CPF} - {cliente.Nome}.txt";
+        File.Delete(filePath);
 
-        Cliente cliente = academia.GetClientePorCPF(cpf);
-
-        if (cliente != null)
-        {
-            academia.RemoverCliente(cliente);
-            Console.WriteLine("Cliente removido com sucesso!");
-        }
-        else
-        {
-            Console.WriteLine("Cliente não encontrado.");
-        }
-
-        Console.ReadLine();
+        Console.WriteLine("Cliente removido com sucesso!");
     }
+    else
+    {
+        Console.WriteLine("Cliente não encontrado.");
+    }
+
+    Console.ReadLine();
+}
 
     static void ListarClientes(Academia academia)
     {
@@ -245,38 +253,42 @@ class Program
     static void GerarRelatorios(Academia academia)
     {
         while (true)
+    {
+        Console.Clear();
+        Console.WriteLine("==== Menu Relatórios ====");
+        Console.WriteLine("\n1. Clientes Ordenados Por Nome");
+        Console.WriteLine("2. Clientes Mais Velhos Para Mais Novos");
+        Console.WriteLine("3. Treinadores Aniversariantes do Mês");
+        Console.WriteLine("4. Gerar Relatório Geral");  // Novo caso adicionado
+        Console.WriteLine("0. Voltar");
+
+        Console.Write("\nEscolha uma opção: ");
+        string opcao = Console.ReadLine();
+
+        switch (opcao)
         {
-            Console.Clear();
-            Console.WriteLine("==== Menu Relatórios ====");
-            Console.WriteLine("\n1. Clientes Ordenados Por Nome");
-            Console.WriteLine("2. Clientes Mais Velhos Para Mais Novos");
-            Console.WriteLine("3. Treinadores Aniversariantes do Mês");
-            Console.WriteLine("0. Voltar");
-
-            Console.Write("\nEscolha uma opção: ");
-            string opcao = Console.ReadLine();
-
-            switch (opcao)
-            {
-                case "1":
-                    academia.ExibirClientesOrdenadosPorNome();
-                    break;
-                case "2":
-                    academia.ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo();
-                    break;
-                case "3":
-                    Console.WriteLine("Informe o número do mês:");
-                    int mes = Convert.ToInt32(Console.ReadLine());
-                    academia.ExibirTreinadoresAniversariantesDoMes(mes);
-                    break;
-                case "0":
-                    return;
-                default:
-                    Console.WriteLine("Opção inválida. Tente novamente.");
-                    Console.ReadLine();
-                    break;
-            }
+            case "1":
+                academia.ExibirClientesOrdenadosPorNome();
+                break;
+            case "2":
+                academia.ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo();
+                break;
+            case "3":
+                Console.WriteLine("Informe o número do mês:");
+                int mes = Convert.ToInt32(Console.ReadLine());
+                academia.ExibirTreinadoresAniversariantesDoMes(mes);
+                break;
+            case "4":  // Novo caso adicionado
+                academia.GerarRelatorioGeral();
+                break;
+            case "0":
+                return;
+            default:
+                Console.WriteLine("Opção inválida. Tente novamente.");
+                Console.ReadLine();
+                break;
         }
+    }
     }
 }
 
@@ -434,6 +446,61 @@ class Academia
             }
         }
     }
+
+    // Adicione este método à classe Academia
+public void GerarRelatorioGeral()
+{
+    string filePath = "RelatorioGeral.txt";
+
+    using (StreamWriter sw = new StreamWriter(filePath))
+    {
+        // Relatório de Treinadores
+        sw.WriteLine("==== Relatório de Treinadores ====\n");
+        List<Treinador> treinadores = ListarTreinadores();
+        foreach (var treinador in treinadores)
+        {
+            sw.WriteLine($"Nome: {treinador.Nome}, CREF: {treinador.CREF}");
+        }
+
+        // Adiciona uma quebra de linha entre os relatórios
+        sw.WriteLine("\n");
+
+        // Relatório de Clientes
+        sw.WriteLine("==== Relatório de Clientes ====\n");
+        List<Cliente> clientes = ListarClientes();
+        foreach (var cliente in clientes)
+        {
+            sw.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
+        }
+
+        // Adiciona uma quebra de linha entre os relatórios
+        sw.WriteLine("\n");
+
+        // Relatório de Treinadores Aniversariantes do Mês
+        sw.WriteLine("==== Relatório de Treinadores Aniversariantes do Mês ====\n");
+        Console.WriteLine("Informe o número do mês:");
+        int mes = Convert.ToInt32(Console.ReadLine());
+        List<Treinador> treinadoresAniversariantes = treinadores
+            .Where(t => t.DataNascimento.Month == mes)
+            .ToList();
+
+        if (treinadoresAniversariantes.Count > 0)
+        {
+            foreach (var treinador in treinadoresAniversariantes)
+            {
+                sw.WriteLine($"Nome: {treinador.Nome}, Data de Nascimento: {treinador.DataNascimento:dd-MM-yyyy}");
+            }
+        }
+        else
+        {
+            sw.WriteLine("Nenhum treinador aniversariante neste mês.");
+        }
+    }
+
+    Console.WriteLine($"Relatório geral gerado com sucesso. Arquivo salvo em {filePath}");
+    Console.ReadLine();
+}
+
 }
 
 class Pessoa
