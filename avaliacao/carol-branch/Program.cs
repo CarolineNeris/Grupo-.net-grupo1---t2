@@ -6,11 +6,11 @@ using Relatorios;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Academia academia = new Academia();
         Relatorio relatorio = new Relatorio();
-        //Exercicio exercicio = new Exercicio();
+
         // Cadastros pré-definidos
         academia.CadastrarCliente("João", new DateTime(1990, 5, 15), "12345678900", 1.75, 70);
         academia.CadastrarCliente("Maria", new DateTime(1985, 10, 25), "98775832100", 1.60, 55);
@@ -25,28 +25,34 @@ class Program
         academia.CadastrarTreinador("Mariana", new DateTime(1982, 9, 20), "99987577766", "624073");
         academia.CadastrarTreinador("Lucas", new DateTime(1978, 11, 5), "33329611100", "789084");
 
-        academia.CadastrarExercicio("Pernas", 3, 12, 60);
-        academia.CadastrarExercicio("Braços", 4, 10, 45);
-        academia.CadastrarExercicio("Abdominais", 5, 15, 30);
-        academia.CadastrarExercicio("Costas", 4, 8, 60);
-        academia.CadastrarExercicio("Peito", 3, 10, 45);
-        academia.CadastrarExercicio("Ombros", 5, 12, 30);
-        academia.CadastrarExercicio("Glúteos", 4, 15, 60);
-        academia.CadastrarExercicio("Trapézio", 3, 8, 45);
-        academia.CadastrarExercicio("Bíceps", 5, 10, 30);
-        academia.CadastrarExercicio("Tríceps", 4, 12, 60);
-        academia.CadastrarExercicio("Panturrilhas", 3, 15, 45);
-        academia.CadastrarExercicio("Antebraços", 5, 8, 30);
-        academia.CadastrarExercicio("Cardio", 4, 10, 60);
-        academia.CadastrarExercicio("Yoga", 3, 12, 45);
-        academia.CadastrarExercicio("Alongamento", 5, 15, 30);
-        academia.CadastrarExercicio("Pilates", 4, 8, 60);
-        academia.CadastrarExercicio("Funcional", 3, 10, 45);
-        academia.CadastrarExercicio("HIIT", 5, 12, 30);
-        academia.CadastrarExercicio("Zumba", 4, 15, 60);
-        academia.CadastrarExercicio("Natação", 3, 8, 45);
+        // Exercicio exercicio = new Exercicio();
 
-        bool continuar = true;
+        Exercicio.CadastrarExercicio("Ombros", 5, 12, 30);
+        Exercicio.CadastrarExercicio("Glúteos", 4, 15, 60);
+        Exercicio.CadastrarExercicio("Trapézio", 3, 8, 45);
+        Exercicio.CadastrarExercicio("Bíceps", 5, 10, 30);
+        Exercicio.CadastrarExercicio("Tríceps", 4, 12, 60);
+        Exercicio.CadastrarExercicio("Panturrilhas", 3, 15, 45);
+        Exercicio.CadastrarExercicio("Antebraços", 5, 8, 30);
+        Exercicio.CadastrarExercicio("Cardio", 4, 10, 60);
+        Exercicio.CadastrarExercicio("Yoga", 3, 12, 45);
+        Exercicio.CadastrarExercicio("Alongamento", 5, 15, 30);
+        Exercicio.CadastrarExercicio("Pilates", 4, 8, 60);
+        Exercicio.CadastrarExercicio("Funcional", 3, 10, 45);
+        Exercicio.CadastrarExercicio("HIIT", 5, 12, 30);
+        Exercicio.CadastrarExercicio("Zumba", 4, 15, 60);
+        Exercicio.CadastrarExercicio("Natação", 3, 8, 45);
+
+        foreach (Exercicio ex in Exercicio.listaExercicios)
+        {
+            Console.WriteLine($"Grupo Muscular: {ex.GrupoMuscular}, Séries: {ex.Series}, Repetições: {ex.Repeticoes}, Intervalo: {ex.TempoIntervaloSegundos} segundos");
+        }
+
+
+        // Mostrar os exercícios cadastrados
+        foreach (Exercicio ex in Exercicio.listaExercicios){}
+
+            bool continuar = true;
 
         while (continuar)
         {
@@ -181,7 +187,7 @@ class Program
                                 int tempoIntervaloSegundos = Convert.ToInt32(Console.ReadLine());
 
                                 // Supondo que "treino" é uma instância de Treino existente onde você deseja adicionar o exercício
-                                academia.CadastrarExercicio(grupoMuscular, series, repeticoes, tempoIntervaloSegundos);
+                                Exercicio.CadastrarExercicio(grupoMuscular, series, repeticoes, tempoIntervaloSegundos);
                                 break;
 
 
@@ -195,7 +201,7 @@ class Program
                         }
                     }
                     break;
-
+            
                 case "0":
                     continuar = false;
                     break;

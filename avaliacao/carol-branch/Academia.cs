@@ -7,7 +7,7 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
     public class Academia
     {
         private List<(object pessoa, string tipo)> cadastros = new List<(object, string)>(); // Inicializando list cadastros
-       
+
         public List<(object pessoa, string tipo)> ObterCadastros()
         {
             return cadastros;
@@ -79,4 +79,38 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
             Console.WriteLine($"CREF: {treinador.CREF}");
         }
     }
+    public class Exercicio
+    {
+        public string GrupoMuscular { get; set; }
+        public int Series { get; set; }
+        public int Repeticoes { get; set; }
+        public int TempoIntervaloSegundos { get; set; }
+
+        public static List<Exercicio> listaExercicios = new List<Exercicio>();
+
+        public static void CadastrarExercicio(string grupoMuscular, int series, int repeticoes, int tempoIntervaloSegundos)
+        {
+            Exercicio novoExercicio = new Exercicio()
+            {
+                GrupoMuscular = grupoMuscular,
+                Series = series,
+                Repeticoes = repeticoes,
+                TempoIntervaloSegundos = tempoIntervaloSegundos
+            };
+
+            listaExercicios.Add(novoExercicio);
+        }
+    }
+
+    class TreinoCliente
+    {
+        public string Tipo { get; set; }
+        public string Objetivo { get; set; }
+        public List<Exercicio> ListaExercicios { get; set; }
+        public int DuracaoEstimadaMinutos { get; set; }
+        public DateTime DataInicio { get; set; }
+        public int VencimentoDias { get; set; }
+    }
+
 }
+
