@@ -341,18 +341,21 @@ class Academia
 {
     var clientesOrdenados = clientes.OrderBy(c => c.Nome).ToList();
 
+    Console.WriteLine("==== Clientes Ordenados Por Nome ====");
+
     if (clientesOrdenados.Count > 0)
     {
         foreach (var cliente in clientesOrdenados)
         {
-            Console.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
+            sw.WriteLine($"Nome: {cliente.Nome}, Altura: {cliente.Altura}, Peso: {cliente.Peso}");
         }
     }
     else
     {
-        Console.WriteLine("Nenhum cliente cadastrado.");
+        sw.WriteLine("Nenhum cliente cadastrado.");
     }
 }
+
 
     public void ExibirClientesOrdenadosPorIdadeMaisVelhoParaMaisNovo(StreamWriter sw)
 {
