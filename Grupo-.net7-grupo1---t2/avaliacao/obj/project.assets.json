@@ -13,11 +13,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
       "projectName": "avaliacao",
       "projectPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+      "projectName": "avaliacao",
+      "projectPath": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+>>>>>>> Stashed changes
       "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\obj\\",
+      "outputPath": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\Grupo-.net7-grupo1---t2\\avaliacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,5 +68,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\Grupo-.net7-grupo1---t2\\avaliacao\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

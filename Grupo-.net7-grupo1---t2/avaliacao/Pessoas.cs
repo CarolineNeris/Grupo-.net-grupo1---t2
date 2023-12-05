@@ -75,6 +75,8 @@ namespace Pessoas
     public class Cliente : Pessoa
     {
         protected double altura;
+
+
         public double Altura
         {
             get => altura;

@@ -9,8 +9,13 @@ namespace Planos
         public string Titulo { get; set; }
         public double ValorPorMes { get; set; }
 
-        public Plano(string titulo, double valorPorMes)
+        public bool Ativo {get; set;}
+
+        
+
+        public Plano(string titulo, double valorPorMes, bool ativo)
         {
+            Ativo = ativo;
             Titulo = titulo;
             ValorPorMes = valorPorMes;
         }

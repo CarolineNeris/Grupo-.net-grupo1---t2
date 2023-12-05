@@ -94,7 +94,7 @@ namespace Academias
             Console.WriteLine("\n=== Lista de Planos ===");
             foreach (Plano plano in ListaPlanos)
             {
-                Console.WriteLine($"Título: {plano.Titulo}, Valor por Mês: {plano.ValorPorMes:C}");
+                Console.WriteLine($"Título: {plano.Titulo}, Valor por Mês: {plano.ValorPorMes:C}, Ativo: {plano.Ativo}");
             }
         }
     }
