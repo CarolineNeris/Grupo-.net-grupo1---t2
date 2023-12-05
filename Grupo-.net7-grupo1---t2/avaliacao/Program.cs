@@ -1,7 +1,8 @@
-﻿using System;
+﻿﻿using System;
 using Pessoas;
 using Academias;
 using Relatorios;
+using Planos;
 
 
 class Program
@@ -55,11 +56,12 @@ class Program
         while (continuar)
         {
             Console.Clear();
-            Console.WriteLine("ACADEMIA TECH FIT - Sistema de Gerenciamento.\n");
-            Console.WriteLine("==== Menu Principal ====\n");
-            Console.WriteLine("1. Cadastros");
-            Console.WriteLine("2. Consultas/Relatórios");
-            Console.WriteLine("0. Sair");
+                Console.WriteLine("ACADEMIA TECH FIT - Sistema de Gerenciamento.\n");
+                Console.WriteLine("==== Menu Principal ====\n");
+                Console.WriteLine("1. Cadastros");
+                Console.WriteLine("2. Consultas/Relatórios");
+                Console.WriteLine("3. Planos");
+                Console.WriteLine("0. Sair");
 
             Console.Write("\nSelecione a operação desejada: ");
             string opcaoPrincipal = Console.ReadLine();            
@@ -208,6 +210,44 @@ class Program
                     }
                     break;
 
+                case "3":
+                        bool menuPlanos = true;
+                        while (menuPlanos)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("==== Menu Planos ====\n");
+                            Console.WriteLine("1. Cadastrar Plano");
+                            Console.WriteLine("2. Listar Planos");
+                            Console.WriteLine("0. Voltar ao Menu Principal");
+
+                            Console.Write("\nSelecione a operação desejada: ");
+                            string opcaoPlanos = Console.ReadLine();
+
+                            switch (opcaoPlanos)
+                            {
+                                case "1":
+                                    Console.WriteLine("\nDigite o título do plano:");
+                                    string tituloPlano = Console.ReadLine();
+                                    Console.WriteLine("Digite o valor por mês do plano:");
+                                    double valorPorMes = Convert.ToDouble(Console.ReadLine());
+                                    academia.CadastrarPlano(tituloPlano, valorPorMes);
+                                    break;
+
+                                case "2":
+                                    academia.ListarPlanos();
+                                    break;
+
+                                case "0":
+                                    menuPlanos = false;
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Opção inválida!");
+                                    break;
+                            }
+                        }
+                        break;
+                
                 
                 case "0":
                     continuar = false;
@@ -216,6 +256,8 @@ class Program
                 default:
                     Console.WriteLine("Opção inválida!");
                     break;
+
+                
             }
         }
     }

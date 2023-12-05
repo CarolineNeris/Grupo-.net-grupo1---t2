@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using Pessoas;
+using Planos;
 
-namespace Academias //optei por incluir um s em academia para divergir do nome da class, isso dá problema
+namespace Academias
 {
     public class Academia
     {
@@ -62,7 +63,6 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
             }
         }
 
-
         private void ExibirDetalhesCliente(Cliente cliente)
         {
             Console.WriteLine($"Nome: {cliente.Nome}");
@@ -79,7 +79,26 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
             Console.WriteLine($"CPF: {treinador.CPF}");
             Console.WriteLine($"CREF: {treinador.CREF}");
         }
+
+        public List<Plano> ListaPlanos { get; set; } = new List<Plano>();
+
+        public void CadastrarPlano(string titulo, double valorPorMes)
+        {
+            Plano novoPlano = new Plano(titulo, valorPorMes);
+            ListaPlanos.Add(novoPlano);
+            Console.WriteLine("Plano cadastrado com sucesso!");
+        }
+
+        public void ListarPlanos()
+        {
+            Console.WriteLine("\n=== Lista de Planos ===");
+            foreach (Plano plano in ListaPlanos)
+            {
+                Console.WriteLine($"Título: {plano.Titulo}, Valor por Mês: {plano.ValorPorMes:C}");
+            }
+        }
     }
+
     public class Exercicio
     {
         public string GrupoMuscular { get; set; }
@@ -103,7 +122,7 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
         }
     }
 
-    class TreinoCliente
+    public class TreinoCliente
     {
         public string Tipo { get; set; }
         public string Objetivo { get; set; }
@@ -113,5 +132,4 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
         public int VencimentoDias { get; set; }
         //estou decidindo se coloco cliente no treino ou treino no cliente
     }
-
 }
