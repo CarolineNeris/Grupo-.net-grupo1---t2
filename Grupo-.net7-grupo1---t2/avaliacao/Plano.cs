@@ -6,4 +6,12 @@ public class Plano
 
     public double Valormensal { get; set; }
 
+    public Plano (string titulo, double valormensal)
+    {
+        Título = titulo;
+        Valormensal = valormensal;
+    }
+
+    
+
 }
