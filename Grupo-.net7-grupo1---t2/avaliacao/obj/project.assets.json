@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\avaliacao\\carol-branch\\.Net-Prova.csproj",
-      "projectName": ".Net-Prova",
-      "projectPath": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\avaliacao\\carol-branch\\.Net-Prova.csproj",
+      "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+      "projectName": "avaliacao",
+      "projectPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
       "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arthu\\OneDrive\\Documents\\GitHub\\Grupo-.net-grupo1---t2\\avaliacao\\carol-branch\\obj\\",
+      "outputPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config"
