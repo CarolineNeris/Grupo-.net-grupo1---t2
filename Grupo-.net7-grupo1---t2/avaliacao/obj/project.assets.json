@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/felipe-gregue-pires/.nuget/packages/": {}
+    "/home/ana-caroline-fonseca/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
+      "projectUniqueName": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
       "projectName": "avaliacao",
-      "projectPath": "/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
-      "packagesPath": "/home/felipe-gregue-pires/.nuget/packages/",
-      "outputPath": "/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/",
+      "projectPath": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
+      "packagesPath": "/home/ana-caroline-fonseca/.nuget/packages/",
+      "outputPath": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/felipe-gregue-pires/.nuget/NuGet/NuGet.Config"
+        "/home/ana-caroline-fonseca/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
