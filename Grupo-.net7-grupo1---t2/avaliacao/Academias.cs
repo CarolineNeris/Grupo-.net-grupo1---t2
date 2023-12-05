@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using Pessoas;
 using Planos;
+using Planos;
 
 namespace Academias
 {
@@ -132,4 +133,7 @@ namespace Academias
         public int VencimentoDias { get; set; }
         //estou decidindo se coloco cliente no treino ou treino no cliente
     }
+
+    public List<Plano> Planos { get; set; } = new List<IPagamento>();
+
 }

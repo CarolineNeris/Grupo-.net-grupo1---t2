@@ -74,6 +74,7 @@ namespace Pessoas
 
     public class Cliente : Pessoa
     {
+        public Plano PlanoAssociado { get; set; } 
         protected double altura;
         public double Altura
         {
@@ -106,6 +107,7 @@ namespace Pessoas
                     throw new ArgumentException("Peso não pode ser negativo.");
                 }
             }
-        }
+        
+        public List<IPagamento> Pagamentos { get; set; } = new List<IPagamento>();
     }
 }
