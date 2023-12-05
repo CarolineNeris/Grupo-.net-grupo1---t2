@@ -13,6 +13,23 @@
 /home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.pdb
 /home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.genruntimeconfig.cache
 /home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/ref/avaliacao.dll
+<<<<<<< HEAD
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.deps.json
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.runtimeconfig.json
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.dll
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.pdb
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.csproj.AssemblyReference.cache
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.GeneratedMSBuildEditorConfig.editorconfig
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.AssemblyInfoInputs.cache
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.AssemblyInfo.cs
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.csproj.CoreCompileInputs.cache
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.dll
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/refint/avaliacao.dll
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.pdb
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.genruntimeconfig.cache
+/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/ref/avaliacao.dll
+=======
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.exe
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.deps.json
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.runtimeconfig.json
@@ -27,3 +44,4 @@ C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avalia
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.pdb
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.genruntimeconfig.cache
 C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\ref\avaliacao.dll
+>>>>>>> main

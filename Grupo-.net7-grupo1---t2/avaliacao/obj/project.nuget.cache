@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "xjAbC5Q351QmFXV3B7zyv7H8p6fIdTHLxG1nhsJCBGfTbgN2UshKINSyX9/dC2UCjSqkI2+QUe+W+OZEAYyq1A==",
+  "success": true,
+  "projectFilePath": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
+=======
   "dgSpecHash": "bDjCk5uIWcH5wwsXt6zSRqyBq9q81aXPttScgPp3ilgHmRKB0U++1dv9YEM+mmycKXcRdwfz3PSIvcmxnMTnug==",
   "success": true,
   "projectFilePath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+>>>>>>> main
   "expectedPackageFiles": [],
   "logs": []
 }
