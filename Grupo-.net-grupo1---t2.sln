@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "avaliacao", "avaliacao", "{911D550E-CE26-437C-91F3-66D1390817D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = ".Net-Prova", "avaliacao\carol-branch\.Net-Prova.csproj", "{6F241530-AD7B-492F-9FB9-AE3C57BD8116}"
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = ".NET-P004", ".NET-P004\.NET-P004.csproj", "{CB0AF2AD-F816-45F2-A8EB-00DF261B7F5A}"
+>>>>>>> dev/Greg
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +17,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{6F241530-AD7B-492F-9FB9-AE3C57BD8116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F241530-AD7B-492F-9FB9-AE3C57BD8116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F241530-AD7B-492F-9FB9-AE3C57BD8116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F241530-AD7B-492F-9FB9-AE3C57BD8116}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{CB0AF2AD-F816-45F2-A8EB-00DF261B7F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB0AF2AD-F816-45F2-A8EB-00DF261B7F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB0AF2AD-F816-45F2-A8EB-00DF261B7F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB0AF2AD-F816-45F2-A8EB-00DF261B7F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> dev/Greg
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 	GlobalSection(NestedProjects) = preSolution
 		{6F241530-AD7B-492F-9FB9-AE3C57BD8116} = {911D550E-CE26-437C-91F3-66D1390817D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {703C4A40-B869-4006-B578-BFC09C5C903B}
+=======
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A938499B-FC0D-4369-BDBB-B1E353333816}
+>>>>>>> dev/Greg
 	EndGlobalSection
 EndGlobal
