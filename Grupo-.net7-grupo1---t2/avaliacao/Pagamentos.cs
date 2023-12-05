@@ -1,22 +1,20 @@
-using InterfacePagamento;
-using Plano;
-
+using InterfacePagamento; 
+using Avaliacao; 
 namespace Pagamentos
 {
     public class Pagamento : IPagamento
     {
-        private readonly Plano plano; // Adicionando referência ao Plano
+        private readonly double valorPlano; 
 
-        public Pagamento(Plano plano)
+        public Pagamento(double valor)
         {
-            this.plano = plano;
+            valorPlano = valor; 
         }
 
-        public void RealizarPagamentoPlano()
+        public void RealizarPagamentoPlano(double valor)
         {
-            double valorPlano = plano.Valormensal; // Obtendo o valor mensal do plano
-            // Aqui você pode realizar a lógica para o pagamento, como imprimir, enviar a transação para um serviço de pagamento, etc.
-            Console.WriteLine($"Pagamento realizado no valor de R$ {valorPlano} para o plano {plano.Título}");
+            
+            Console.WriteLine($"Pagamento realizado no valor de R$ {valor}");
         }
     }
 }

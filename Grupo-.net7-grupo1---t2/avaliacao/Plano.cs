@@ -1,17 +1,19 @@
-﻿namespace avaliacao;
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Dynamic;
 
-public class Plano
+namespace Planos
 {
-    public string Título { get; set; }
-
-    public double Valormensal { get; set; }
-
-    public Plano (string titulo, double valormensal)
+    public class Plano
     {
-        Título = titulo;
-        Valormensal = valormensal;
-    }
+        public string Titulo { get; set; }
+        public double ValorPorMes { get; set; }
 
-    
+        public Plano(string titulo, double valorPorMes)
+        {
+            Titulo = titulo;
+            ValorPorMes = valorPorMes;
+        }
+    }
 
 }
