@@ -1,0 +1,29 @@
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.deps.json
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.runtimeconfig.json
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.dll
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/bin/Debug/net7.0/avaliacao.pdb
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.csproj.AssemblyReference.cache
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.GeneratedMSBuildEditorConfig.editorconfig
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.AssemblyInfoInputs.cache
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.AssemblyInfo.cs
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.csproj.CoreCompileInputs.cache
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.dll
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/refint/avaliacao.dll
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.pdb
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/avaliacao.genruntimeconfig.cache
+/home/felipe-gregue-pires/Área de trabalho/Grupo-.net7-grupo1---t2/avaliacao/obj/Debug/net7.0/ref/avaliacao.dll
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.exe
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.deps.json
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.runtimeconfig.json
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.dll
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\bin\Debug\net7.0\avaliacao.pdb
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.AssemblyInfoInputs.cache
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.AssemblyInfo.cs
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.csproj.CoreCompileInputs.cache
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.dll
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\refint\avaliacao.dll
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.pdb
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\avaliacao.genruntimeconfig.cache
+C:\Users\arthu\OneDrive\Documents\Residencia\.Net\Grupo-.net7-grupo1---t2\avaliacao\obj\Debug\net7.0\ref\avaliacao.dll
