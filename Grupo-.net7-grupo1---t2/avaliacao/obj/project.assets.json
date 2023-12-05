@@ -8,11 +8,16 @@
     "net7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/home/ana-caroline-fonseca/.nuget/packages/": {}
+=======
+    "C:\\Users\\arthu\\.nuget\\packages\\": {}
+>>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
       "projectName": "avaliacao",
       "projectPath": "/home/ana-caroline-fonseca/Documentos/aula.pagamento/novo/Grupo-.net-grupo1---t2/Grupo-.net7-grupo1---t2/avaliacao/avaliacao.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ana-caroline-fonseca/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+      "projectName": "avaliacao",
+      "projectPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\avaliacao.csproj",
+      "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\arthu\\OneDrive\\Documents\\Residencia\\.Net\\Grupo-.net7-grupo1---t2\\avaliacao\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> main
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +74,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> main
       }
     }
   }
