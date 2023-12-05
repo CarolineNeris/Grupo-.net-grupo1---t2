@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using Pessoas;
+using Planos;
 
 namespace Academias //optei por incluir um s em academia para divergir do nome da class, isso dá problema
 {
@@ -113,5 +114,7 @@ namespace Academias //optei por incluir um s em academia para divergir do nome d
         public int VencimentoDias { get; set; }
         //estou decidindo se coloco cliente no treino ou treino no cliente
     }
+
+    public List<Plano> Planos { get; set; } = new List<IPagamento>();
 
 }
